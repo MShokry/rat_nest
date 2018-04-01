@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6823,7 +6823,7 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <wire x1="154.94" y1="187.96" x2="154.94" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="ESP12F(PIN21)" class="0">
+<net name="RX" class="0">
 <segment>
 <pinref part="SJ2" gate="1" pin="1"/>
 <wire x1="342.9" y1="236.22" x2="342.9" y2="220.98" width="0.1524" layer="91"/>
@@ -6836,9 +6836,10 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <wire x1="342.9" y1="187.96" x2="342.9" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="PD1"/>
 <wire x1="342.9" y1="220.98" x2="302.26" y2="220.98" width="0.1524" layer="91"/>
+<label x="358.14" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ESP12F(PIN22)" class="0">
+<net name="TX" class="0">
 <segment>
 <wire x1="340.36" y1="238.76" x2="340.36" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="PD0"/>
@@ -6851,6 +6852,7 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <wire x1="345.44" y1="182.88" x2="345.44" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="MCU_FIRM2" gate="FIRM_PADS" pin="3"/>
 <wire x1="345.44" y1="170.18" x2="342.9" y2="170.18" width="0.1524" layer="91"/>
+<label x="347.98" y="170.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -7182,12 +7184,11 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <label x="307.34" y="205.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="CH_PD" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="CH_PD"/>
 <wire x1="391.16" y1="233.68" x2="388.62" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="401.32" y1="236.22" x2="391.16" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="391.16" y1="236.22" x2="391.16" y2="233.68" width="0.1524" layer="91"/>
+<label x="393.7" y="233.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V1" class="1">

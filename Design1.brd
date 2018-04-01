@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2559,14 +2559,14 @@ Your Eurocircuits Team
 <wire x1="49.241478125" y1="29.618671875" x2="47.993203125" y2="25.9525875" width="0" layer="19" extent="1-1"/>
 <wire x1="12.45" y1="19.9754" x2="25.92" y2="14.17" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="ESP12F(PIN21)">
+<signal name="RX">
 <contactref element="SJ2" pad="1"/>
 <contactref element="MCU_FIRM2" pad="4"/>
 <contactref element="U1" pad="31"/>
 <wire x1="46.902" y1="56.85" x2="53.592815625" y2="53.58893125" width="0" layer="19" extent="1-16"/>
 <wire x1="36.52848125" y1="21.999275" x2="53.592815625" y2="53.58893125" width="0" layer="19" extent="1-16"/>
 </signal>
-<signal name="ESP12F(PIN22)">
+<signal name="TX">
 <contactref element="U1" pad="30"/>
 <contactref element="SJ1" pad="1"/>
 <contactref element="MCU_FIRM2" pad="3"/>
@@ -2714,7 +2714,7 @@ Your Eurocircuits Team
 <signal name="TEMP">
 <contactref element="U1" pad="11"/>
 </signal>
-<signal name="N$5">
+<signal name="CH_PD">
 <contactref element="U2" pad="3"/>
 </signal>
 <signal name="+3V1" class="1">
@@ -2728,34 +2728,6 @@ Your Eurocircuits Team
 <wire x1="49.26" y1="36.98" x2="50.36" y2="31.96" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,16,d38c62809858bed2"/>
-<approved hash="4,16,6eb699368a7b03d9"/>
-<approved hash="4,16,5a2c04c568276d94"/>
-<approved hash="4,16,c82f1561768e3e1f"/>
-<approved hash="5,16,71acd5dcb7252eb0"/>
-<approved hash="5,16,eef055ddb72f31e7"/>
-<approved hash="5,16,f45955ddb73d2b5c"/>
-<approved hash="5,16,6bc3d5dab72734db"/>
-<approved hash="2,20,06be1feef511f435"/>
-<approved hash="2,20,1a6a059ae03dec99"/>
-<approved hash="2,20,1abc03ecf113ec11"/>
-<approved hash="2,20,19440784e19bed25"/>
-<approved hash="2,20,1934009cd0dbece1"/>
-<approved hash="2,20,1fc607ce10f9eefd"/>
-<approved hash="3,16,f994070336172f44"/>
-<approved hash="3,16,c86e82f28268c8f4"/>
-<approved hash="3,16,d88d7db2fa2f3dff"/>
-<approved hash="4,16,3ffaca0e03848529"/>
-<approved hash="4,16,9d260e0985382b7d"/>
-<approved hash="4,16,b9b8308bfcb1ca2f"/>
-<approved hash="4,16,1e6bea57d329bc63"/>
-<approved hash="5,16,9099194389273206"/>
-<approved hash="5,16,17ea994c892f3572"/>
-<approved hash="5,16,8960194389252bfd"/>
-<approved hash="5,16,0c4d994288dd2f29"/>
-<approved hash="5,16,2c8c0a324a85ca68"/>
-</errors>
 </board>
 </drawing>
 <compatibility>

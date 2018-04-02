@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6729,7 +6729,7 @@ http://www.lumberg.de&lt;p&gt;
 <part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 <part name="SJ2" library="jumper" deviceset="SJ" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="S1" library="switch-tact" deviceset="DTSM-3" device=""/>
+<part name="S1" library="switch-tact" deviceset="DTSM-3" device="" value="RESET_A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R10" library="SMD Resistors" deviceset="0.75OHM-1/4W-1%(0805)" device="" value="12K"/>
 <part name="R11" library="SMD Resistors" deviceset="0.75OHM-1/4W-1%(0805)" device="" value="10k"/>
@@ -6740,10 +6740,10 @@ http://www.lumberg.de&lt;p&gt;
 <part name="C1" library="rc-master-smd" deviceset="CP_" device="6032" value="10UF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="MCU_FIRM1" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS"/>
-<part name="MCU_FIRM2" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS"/>
-<part name="U$3" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS"/>
-<part name="MCU_FIRM3" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS"/>
+<part name="CON1" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS" value="AT1"/>
+<part name="CON2" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS" value="AT2"/>
+<part name="CON4" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS" value="ESP2"/>
+<part name="CON3" library="firm_pads" deviceset="FIRM_PADS" device="SMD_FIRM_PADS" value="ESP1"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="104pF"/>
@@ -6751,13 +6751,13 @@ http://www.lumberg.de&lt;p&gt;
 <part name="R1" library="SMD Resistors" deviceset="0.75OHM-1/4W-1%(0805)" device="" value="10k"/>
 <part name="SV1" library="con-amp-mt6" library_urn="urn:adsk.eagle:library:124" deviceset="MT6-3Y" device="" package3d_urn="urn:adsk.eagle:package:5892/1"/>
 <part name="ST1" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="MSF3" device="" package3d_urn="urn:adsk.eagle:package:8526/1"/>
-<part name="S2" library="switch-tact" deviceset="DTSM-3" device=""/>
+<part name="S2" library="switch-tact" deviceset="DTSM-3" device="" value="UPDATE"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="S3" library="switch-tact" deviceset="DTSM-3" device=""/>
+<part name="S3" library="switch-tact" deviceset="DTSM-3" device="" value="CONFIG"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="S4" library="switch-tact" deviceset="DTSM-3" device=""/>
+<part name="S4" library="switch-tact" deviceset="DTSM-3" device="" value="RESET"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="S5" library="switch-tact" deviceset="DTSM-3" device=""/>
+<part name="S5" library="switch-tact" deviceset="DTSM-3" device="" value="TEST"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -6812,10 +6812,10 @@ LOW       | HIGH  |  HIGH Boot</text>
 <instance part="C1" gate="G$1" x="231.14" y="142.24" rot="R90"/>
 <instance part="GND7" gate="1" x="238.76" y="134.62"/>
 <instance part="GND12" gate="1" x="213.36" y="147.32" rot="R90"/>
-<instance part="MCU_FIRM1" gate="FIRM_PADS" x="309.88" y="165.1"/>
-<instance part="MCU_FIRM2" gate="FIRM_PADS" x="340.36" y="165.1"/>
-<instance part="U$3" gate="FIRM_PADS" x="429.26" y="187.96" rot="R180"/>
-<instance part="MCU_FIRM3" gate="FIRM_PADS" x="393.7" y="175.26"/>
+<instance part="CON1" gate="FIRM_PADS" x="309.88" y="165.1"/>
+<instance part="CON2" gate="FIRM_PADS" x="340.36" y="165.1"/>
+<instance part="CON4" gate="FIRM_PADS" x="429.26" y="187.96" rot="R180"/>
+<instance part="CON3" gate="FIRM_PADS" x="393.7" y="175.26"/>
 <instance part="GND10" gate="1" x="231.14" y="134.62"/>
 <instance part="+3V1" gate="G$1" x="246.38" y="154.94"/>
 <instance part="C4" gate="G$1" x="200.66" y="152.4"/>
@@ -6904,12 +6904,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <junction x="246.38" y="139.7"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM2" gate="FIRM_PADS" pin="2"/>
-<wire x1="342.9" y1="172.72" x2="347.98" y2="172.72" width="0.1524" layer="91"/>
-<label x="347.98" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="FIRM_PADS" pin="4"/>
+<pinref part="CON4" gate="FIRM_PADS" pin="4"/>
 <wire x1="426.72" y1="185.42" x2="419.1" y2="185.42" width="0.1524" layer="91"/>
 <label x="414.02" y="185.42" size="1.778" layer="95"/>
 </segment>
@@ -6958,6 +6953,11 @@ LOW       | HIGH  |  HIGH Boot</text>
 <junction x="187.96" y="198.12"/>
 <junction x="190.5" y="198.12"/>
 </segment>
+<segment>
+<pinref part="CON1" gate="FIRM_PADS" pin="4"/>
+<wire x1="312.42" y1="167.64" x2="317.5" y2="167.64" width="0.1524" layer="91"/>
+<label x="317.5" y="167.64" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RX" class="0">
 <segment>
@@ -6969,7 +6969,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="327.66" y="220.98" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM2" gate="FIRM_PADS" pin="4"/>
+<pinref part="CON2" gate="FIRM_PADS" pin="4"/>
 <wire x1="342.9" y1="167.64" x2="347.98" y2="167.64" width="0.1524" layer="91"/>
 <label x="347.98" y="167.64" size="1.778" layer="95"/>
 </segment>
@@ -6984,7 +6984,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="327.66" y="223.52" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM2" gate="FIRM_PADS" pin="3"/>
+<pinref part="CON2" gate="FIRM_PADS" pin="3"/>
 <wire x1="347.98" y1="170.18" x2="342.9" y2="170.18" width="0.1524" layer="91"/>
 <label x="347.98" y="170.18" size="1.778" layer="95"/>
 </segment>
@@ -7060,7 +7060,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="327.66" y="236.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="FIRM_PADS" pin="3"/>
+<pinref part="CON4" gate="FIRM_PADS" pin="3"/>
 <wire x1="426.72" y1="182.88" x2="419.1" y2="182.88" width="0.1524" layer="91"/>
 <label x="414.02" y="182.88" size="1.778" layer="95"/>
 </segment>
@@ -7076,14 +7076,14 @@ LOW       | HIGH  |  HIGH Boot</text>
 <segment>
 <wire x1="325.12" y1="175.26" x2="322.58" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="175.26" x2="320.04" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="MCU_FIRM1" gate="FIRM_PADS" pin="2"/>
+<pinref part="CON1" gate="FIRM_PADS" pin="2"/>
 <wire x1="312.42" y1="172.72" x2="320.04" y2="172.72" width="0.1524" layer="91"/>
 <label x="317.5" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="MCU_FIRM1" gate="FIRM_PADS" pin="3"/>
+<pinref part="CON1" gate="FIRM_PADS" pin="3"/>
 <wire x1="312.42" y1="170.18" x2="317.5" y2="170.18" width="0.1524" layer="91"/>
 <label x="317.5" y="170.18" size="1.778" layer="95"/>
 </segment>
@@ -7111,7 +7111,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <segment>
 <wire x1="325.12" y1="177.8" x2="322.58" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="177.8" x2="320.04" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="MCU_FIRM1" gate="FIRM_PADS" pin="1"/>
+<pinref part="CON1" gate="FIRM_PADS" pin="1"/>
 <wire x1="312.42" y1="175.26" x2="320.04" y2="175.26" width="0.1524" layer="91"/>
 <label x="317.5" y="175.26" size="1.778" layer="95"/>
 </segment>
@@ -7126,12 +7126,12 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="350.52" y="238.76" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="FIRM_PADS" pin="2"/>
+<pinref part="CON4" gate="FIRM_PADS" pin="2"/>
 <wire x1="426.72" y1="180.34" x2="419.1" y2="180.34" width="0.1524" layer="91"/>
 <label x="414.02" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$11" class="1">
+<net name="AT_VCC" class="1">
 <segment>
 <pinref part="U1" gate="A" pin="AVCC"/>
 <pinref part="U1" gate="A" pin="VCC"/>
@@ -7148,6 +7148,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <wire x1="266.7" y1="226.06" x2="261.62" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="261.62" y1="226.06" x2="261.62" y2="238.76" width="0.1524" layer="91"/>
 <junction x="261.62" y="238.76"/>
+<label x="256.54" y="241.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RST_E" class="0">
@@ -7160,7 +7161,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <wire x1="416.56" y1="238.76" x2="416.56" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM3" gate="FIRM_PADS" pin="4"/>
+<pinref part="CON3" gate="FIRM_PADS" pin="4"/>
 <wire x1="396.24" y1="177.8" x2="401.32" y2="177.8" width="0.1524" layer="91"/>
 <label x="401.32" y="177.8" size="1.778" layer="95"/>
 </segment>
@@ -7172,7 +7173,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="345.44" y="228.6" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM3" gate="FIRM_PADS" pin="3"/>
+<pinref part="CON3" gate="FIRM_PADS" pin="3"/>
 <wire x1="396.24" y1="180.34" x2="401.32" y2="180.34" width="0.1524" layer="91"/>
 <label x="401.32" y="180.34" size="1.778" layer="95"/>
 </segment>
@@ -7220,7 +7221,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="167.64" y="251.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM2" gate="FIRM_PADS" pin="1"/>
+<pinref part="CON2" gate="FIRM_PADS" pin="1"/>
 <wire x1="342.9" y1="175.26" x2="347.98" y2="175.26" width="0.1524" layer="91"/>
 <label x="347.98" y="175.26" size="1.778" layer="95"/>
 </segment>
@@ -7249,12 +7250,6 @@ LOW       | HIGH  |  HIGH Boot</text>
 <pinref part="U1" gate="A" pin="PC0"/>
 <wire x1="302.26" y1="243.84" x2="307.34" y2="243.84" width="0.1524" layer="91"/>
 <label x="307.34" y="243.84" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="MCU_FIRM1" gate="FIRM_PADS" pin="4"/>
-<wire x1="312.42" y1="167.64" x2="317.5" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="1">
@@ -7293,7 +7288,7 @@ LOW       | HIGH  |  HIGH Boot</text>
 <junction x="439.42" y="241.3"/>
 </segment>
 <segment>
-<pinref part="MCU_FIRM3" gate="FIRM_PADS" pin="2"/>
+<pinref part="CON3" gate="FIRM_PADS" pin="2"/>
 <wire x1="396.24" y1="182.88" x2="401.32" y2="182.88" width="0.1524" layer="91"/>
 <label x="401.32" y="182.88" size="1.778" layer="95"/>
 </segment>
@@ -7325,6 +7320,11 @@ LOW       | HIGH  |  HIGH Boot</text>
 <wire x1="302.26" y1="213.36" x2="307.34" y2="213.36" width="0.1524" layer="91"/>
 <label x="307.34" y="213.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CON3" gate="FIRM_PADS" pin="1"/>
+<wire x1="396.24" y1="185.42" x2="401.32" y2="185.42" width="0.1524" layer="91"/>
+<label x="401.32" y="185.42" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ESP_CONFIG" class="0">
 <segment>
@@ -7338,15 +7338,9 @@ LOW       | HIGH  |  HIGH Boot</text>
 <label x="307.34" y="208.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="MCU_FIRM3" gate="FIRM_PADS" pin="1"/>
-<wire x1="396.24" y1="185.42" x2="401.32" y2="185.42" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$3" gate="FIRM_PADS" pin="1"/>
+<pinref part="CON4" gate="FIRM_PADS" pin="1"/>
 <wire x1="426.72" y1="177.8" x2="419.1" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
